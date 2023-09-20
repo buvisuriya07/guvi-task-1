@@ -1,0 +1,61 @@
+Write a blog on Difference between HTTP1.1 vs HTTP2
+ HTTP:
+          Hypertext Transfer Protocol (HTTP) is an application protocol that is, currently, the foundation of data communication for the World Wide Web. 
+HTTP is based on the Client/Server model. Client/Server model can be explained as two computers, Client (receiver of service) and Server (provider of service) that are communicating via requests and responses.
+
+HTTP/2:
+In 2015, Internet Engineering Task Force (IETF) release HTTP/2, the second major version of the most useful internet protocol, HTTP. It was derived from the earlier experimental SPDY protocol.
+
+Main goals of developing HTTP/2 was:
+
+Protocol negotiation mechanism — protocol electing, eg. HTTP/1.1, HTTP/2 or other.
+High-level compatibility with HTTP/1.1 — methods, status codes, URIs and header fields.
+Page load speed improvements trough:
+Compression of request headers
+Binary protocol
+HTTP/2 Server Push
+Request multiplexing over a single TCP connection
+Request pipelining
+HOL blocking (Head-of-line) — Package blocking
+
+HTTP/1.1
+1.It works on the textual format.
+2.There is head of line blocking that blocks all the requests behind it until it doesn’t get its all resources.
+3.It uses requests resource Inlining for use getting multiple pages
+4.It compresses data by itself.
+
+HTTP/2
+1.It works on the binary protocol.
+2.It allows multiplexing so one TCP connection is required for multiple requests.
+3.It uses PUSH frame by server that collects all multiple pages 
+4.It uses HPACK for data compression.
+
+
+2.Write a blog about objects and its internal representation in Javascript
+
+objects:
+An object is a collection of properties, and a property is an association between a name (or key) and a value. A property's value can be a function, in which case the property is known as a method.
+
+Syntax:
+
+new Object(value)
+
+Object(value)
+
+let object_name = {
+    key_name : value,
+    ...
+}
+
+EXAMPLE:
+/ JavaScript code demonstrating a simple object
+let school = {
+    name: 'G.S.Hindu hr.sec.school',
+    location : 'srivilliputtur',
+    established : '1971',
+    displayInfo : function(){
+        console.log(`${school.name} was established 
+              in ${school.established} at ${school.location}`);
+    }
+}
+school.displayInfo();  
